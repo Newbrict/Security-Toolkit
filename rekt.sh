@@ -25,6 +25,13 @@ case $script in
 	str2asm)
 		python $dir/tools/str2asm.py "$1"
 	;;
+	bin2shell)
+		for i in $(objdump -d $1 -M intel |grep "^ " |cut -f2)
+		do
+			echo -n '\x'$i
+		done
+		echo
+	;;
 	help)
 		cat $dir/help.txt
 	;;

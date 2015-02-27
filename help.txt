@@ -1,4 +1,5 @@
 [ Available Commands ]
-h2d     - Convert hex to decimal
-d2h     - Convert decimal to hex
-str2asm - Convert a string into little endian assembly push statements
+h2d       - Convert hex to decimal
+d2h       - Convert decimal to hex
+str2asm   - Convert a string into little endian assembly push statements
+bin2shell - Get the shellcode for a given binary
