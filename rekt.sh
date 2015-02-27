@@ -16,14 +16,14 @@ shift
 case $script in
 	# Hex to Decimal
 	h2d)
-		printf '%d\n' $1
+		printf '%d\n' "$1"
 	;;
 	# Decimal to Hex
 	d2h)
-		printf '0x%x\n' $1
+		printf '0x%x\n' "$1"
 	;;
 	str2asm)
-		python $dir/tools/str2asm.py $1
+		python $dir/tools/str2asm.py "$1"
 	;;
 	help)
 		cat $dir/help.txt
