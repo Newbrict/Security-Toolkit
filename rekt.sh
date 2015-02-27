@@ -25,6 +25,9 @@ case $script in
 	str2asm)
 		python $dir/tools/str2asm.py $1
 	;;
+	help)
+		cat $dir/help.txt
+	;;
 	*)
 		echo "Unknown script"
 	;;

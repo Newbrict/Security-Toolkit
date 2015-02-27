@@ -12,3 +12,8 @@ then go ahead and try it out:
 $ rekt h2d 0xdeadbeef
 3735928559
 ```
+
+
+## Contributing
+If you write a tool please add it to the rekt.sh case statement
+and document it in help.txt
