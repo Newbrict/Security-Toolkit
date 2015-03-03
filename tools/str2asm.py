@@ -17,5 +17,6 @@ if len(string)%4 != 0:
     string = (['00']*4)[len(string)%4:] + string
 
 # output our assembly
+print('; '+ sys.argv[1])
 for i in range(0,len(string),4):
     print('push 0x'+''.join(string[i:i+4]))

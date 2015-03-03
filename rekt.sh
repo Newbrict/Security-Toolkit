@@ -8,6 +8,7 @@ fi
 
 # Determine relative directory
 dir=$(dirname $0)
+tools="$dir/tools"
 
 # Consume the first arg
 script=$1
@@ -16,14 +17,14 @@ shift
 case $script in
 	# Hex to Decimal
 	h2d)
-		printf '%d\n' "$1"
+		python $tools/h2d.py "$1"
 	;;
 	# Decimal to Hex
 	d2h)
-		printf '0x%x\n' "$1"
+		python $tools/d2h.py "$1"
 	;;
 	str2asm)
-		python $dir/tools/str2asm.py "$1"
+		python $tools/str2asm.py "$1"
 	;;
 	bin2shell)
 		for i in $(objdump -d $1 -M intel |grep "^ " |cut -f2)
