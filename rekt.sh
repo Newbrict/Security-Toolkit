@@ -26,6 +26,9 @@ case $script in
 	str2asm)
 		python $tools/str2asm.py "$1"
 	;;
+	hex2str)
+		python $tools/hex2str.py "$1"
+	;;
 	bin2shell)
 		for i in $(objdump -d $1 -M intel |grep "^ " |cut -f2)
 		do
